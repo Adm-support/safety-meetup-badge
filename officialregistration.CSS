@@ -1,0 +1,79 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffcccc;
+  /* Light red background */
+  color: #333;
+}
+
+header,
+footer {
+  background-color: #8B0000;
+  /* Dark red header and footer */
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.registration-form {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+/* Flags sliding effect */
+.flag-slider {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  margin: 20px 0;
+  position: relative;
+}
+
+.flag-slider .flag-container {
+  display: flex;
+  animation: slide 30s linear infinite;
+  width: max-content;
+  /* To allow endless sliding */
+}
+
+.flag-slider img {
+  width: 100px;
+  /* Fixed width for all flags */
+  height: 60px;
+  /* Fixed height for all flags */
+  margin-right: 20px;
+  /* Space between flags */
+  flex-shrink: 0;
+}
+
+/* Sliding effect: Moves the container left continuously */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
